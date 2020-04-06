@@ -1,0 +1,78 @@
+1. A Class or type is just the blueprint or skeleton which
+dictates which properties each of its objects can have.
+Think of it as a Person. A 'Class' Person has many atributes
+(eye color, height, etc.), and can do some things (jump, drink, etc).
+But Person, as a Class, has no concret properties. "Person" can do nothing.
+*A*person, *Each* concret person has a height of 180cm, blue eyes, etc and
+jumps or drinks. 
+So the objects are the "concrete and real" units that can have the properties
+and methods established in its class.
+
+2. Fields, attributes.
+3. Operations.
+
+4. A dot-- object.method(parameter1)
+5. A method is similar to a functions but it must be called using an object. 
+A funciont can just be called used its name (def name():)
+6. "string".strip()
+7.len("whateverstring") -equally, len(objectOfTypeStr)
+
+8. TextIOWrappe (can return different types in case you are opening a file
+in the binary mode, check help(open)
+9.The mode in which a file is opened. By default, it is 'rt', 
+open the file to read from it in text mode. 'W' open the file to write in it,
+BUT every time you open the file, you will rewrite on it if you use this mode.
+So all prior information would be lost.
+'a' mode allows you to write new content "appended" to the previous content,
+without rewriting it.
+
+13. From some things (like drawing just A triangle), it doesn't make such 
+a difference. But working with object allows you to treat each object
+independently. This allows you, for instance, to delete just a givven object
+while some other things, drawn with different objects, stay. 
+The next code illustrates this point. We create a couple of objects;
+clear the first one without affecting the second draw, which was drawn
+with the second object:
+
+import turtle
+t1 = turtle.Turtle()
+t1.penup()
+t1.setposition(50,50)
+t1.pendown()
+t1.forward(100)
+t1.left(90)
+t1.forward(100)
+t2=turtle.Turtle()
+t2.setpos(0,0)
+t2.backward(300)
+t1.clear()
+
+
+#turtle.clearscreen()
+
+
+Plus there are many other advantages which are just common to all the Object Oriented
+focus.
+
+15. Strings as such are immutable, which means that they cannot be modified.
+You can use method which return new strings, and assign them to vairables.
+
+16. You coulnd't modify anything in a given Turtle object, so the program would not be useful
+as you couldn't modify its direction, color, size and whatever attribute you can think of.
+You couldn't pretty much draw anything.
+
+17. Whenever you de-reference an object, and its information isn't referenced by any other variable,
+this information cannot be accesed and it is considered. 
+This information occupies memory an it should be "deleted" or collected (18)
+
+18. The process of deleting information which is considered garbage.
+Python uses a counter for each object that tracks the numbers of variables which reference
+or point to this each object. So if an object is referenced by var1, var2 and var3, its counter is 3.
+Once the counter of an object equals to zero, de garbage collector can work.
+
+19. 
+a) Two, both b and c, as a refers to a different object ("XYZ")
+b)At the end, it is not, because A refers to a different object after the last assignment.
+Before the last one, it is.
+c)I would say that c alises b, but yes, both refer to the same object. 
+
